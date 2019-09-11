@@ -1,0 +1,17 @@
+/* Estilos módulo 01 */
+
+
+.col-form {
+    background-color: #2d2d2c;
+    padding: 2em;
+    margin-top: 5em;
+    border-radius: 15px;
+}
+
+#resetPass{
+  float: right;
+}
+
+.textosLogin{
+  color:white;
+}
