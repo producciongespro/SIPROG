@@ -96,6 +96,7 @@ View.prototype.table2 = function (array,anos,visor) {
         var estados = [0,0,0,0,0,0,0,0];
          var totalAudios = [0,0,0,0];
          var totalActualizados = [0,0,0,0];
+         var totalInternos = [0,0,0,0];
          var totalVideos = [0,0,0,0];
          var totalImagenes = [0,0,0,0];
          var totalDocumentos = [0,0,0,0];
@@ -110,18 +111,20 @@ View.prototype.table2 = function (array,anos,visor) {
         "<thead>" +
         "<tr>" +
           // "<th scope='col'>#</th>" +
-          "<th colspan='2' class='text-center' scope='col'>Total de Recursos por Trimestre</th>" +
+          "<th scope='col' class='titulos-columnas'>Trimestre</th>" +
+            "<th scope='col' class='titulos-columnas'>Publicados</th>" +
+            "<th scope='col' class='titulos-columnas'> Actu </th>" +
           // "<th class='text-center' scope='col'>Total de recursos</th>" +
-          "<th scope='col'>Total de audios</th>" +
-          "<th scope='col'>Total de im\u00E1genes</th>" +
-          "<th scope='col'>Total de documentos</th>" +
-          "<th scope='col'>Total de v\u00EDdeos</th>" +
-          "<th scope='col'> Contrataci\u00F3n Administrativa </th>" +
-          "<th scope='col'> Gestionados </th>" +
-          "<th scope='col'> No pedag\u00F3gicos </th>" +
-            "<th scope='col'> Actualizaciones </th>" +
-        "</tr>" +
-        "</thead>" +
+          "<th scope='col' class='verdes titulos-columnas'>Total de audios</th>" +
+          "<th scope='col' class='verdes titulos-columnas'>Total de im\u00E1genes</th>" +
+          "<th scope='col' class='verdes titulos-columnas'>Total de documen</th>" +
+          "<th scope='col' class='verdes titulos-columnas'>Total de v\u00EDdeos</th>" +
+          "<th scope='col'  class='titulos-columnas'> Contrataci\u00F3n </th>" +
+          "<th scope='col'  class='titulos-columnas'> Gestionados </th>" +
+          "<th scope='col' class='titulos-columnas'> Prod. Interna (Incluye actualiza.) </th>" +
+          "<th scope='col' class='diferentes titulos-columnas'> No pedag\u00F3g</th>" +
+          "</tr>" +
+          "</thead>" +
         "</table>");
       var tBody = $("<tbody></tbody>");
       for (var i = 0; i < 4; i++) {
@@ -146,6 +149,9 @@ View.prototype.table2 = function (array,anos,visor) {
                   if (array[index].id_tipo==6) {
                     totalNoPedagogicos[i] = parseInt(totalNoPedagogicos[i]) + 1;
                   }
+                if (array[index].id_cat==2) {
+                    totalInternos[i] = parseInt(totalInternos[i]) + 1;
+                  }
 
                   totalDocumentos[i] = parseInt(totalDocumentos[i]) + parseInt(array[index].documentos);
                   if ((array[index].id_estado == 4)) {
@@ -168,15 +174,18 @@ View.prototype.table2 = function (array,anos,visor) {
                      totalRecursos[i] +
                   "</td>" +
                     "<td class='text-center'>" +
+                      totalActualizados[i] +
+                  "</td>" +
+                    "<td class='text-center verdes'>" +
                       totalAudios[i] +
                     "</td>" +
-                    "<td class='text-center'>" +
+                    "<td class='text-center verdes'>" +
                       totalImagenes[i] +
                     "</td>" +
-                    "<td class='text-center'>" +
+                    "<td class='text-center verdes'>" +
                       totalDocumentos[i] +
                     "</td>" +
-                    "<td class='text-center'>" +
+                    "<td class='text-center verdes'>" +
                     totalVideos[i] +
                   "</td>" +
                   "<td class='text-center'>" +
@@ -185,18 +194,20 @@ View.prototype.table2 = function (array,anos,visor) {
                   "<td class='text-center'>" +
                       totalGestion[i] +
                   "</td>" +
-                  "<td class='text-center'>" +
+                    "<td class='text-center'>" +
+                      totalInternos[i] +
+                  "</td>" +
+                  "<td class='text-center diferentes'>" +
                       totalNoPedagogicos[i] +
                   "</td>" +
-                  "<td class='text-center'>" +
-                      totalActualizados[i] +
-                  "</td>" +
+
+
                 "</tr>"
               );
                 $(tBody).append(row);
 
             }
-            var totales, audios=0,videos=0,documentos=0,imagenes=0,contratacion=0,gestion=0,noPedagogicos=0,recursos=0,actualizados=0;
+            var totales, audios=0,videos=0,documentos=0,imagenes=0,contratacion=0,gestion=0,noPedagogicos=0,recursos=0,internos=0, actualizados=0;
             for (var i = 0; i < 4; i++) {
               audios = (audios + parseInt(totalAudios[i]));
               videos = (videos + parseInt(totalVideos[i]));
@@ -206,6 +217,7 @@ View.prototype.table2 = function (array,anos,visor) {
               gestion = (gestion + parseInt(totalGestion[i]));
               noPedagogicos = (noPedagogicos+ parseInt(totalNoPedagogicos[i]));
               recursos = (recursos + parseInt(totalRecursos[i]));
+              internos = (internos + parseInt(totalInternos[i]));
               actualizados = (actualizados + parseInt(totalActualizados[i]));
             }
             row = $(
@@ -213,19 +225,22 @@ View.prototype.table2 = function (array,anos,visor) {
                   "<td class='text-center'><b>" +
                   "TOTALES"  +
               "</b></td>" +
-                "<td class='text-center'>" +
+                "<td class='text-center'><b>" +
                   recursos +
+                "</b><td class='text-center'><b>" +
+                  actualizados +
+              "</b></td>" +
               "</td>" +
-              "<td class='text-center'>" +
+              "<td class='text-center verdes'>" +
                   audios +
               "</td>" +
-              "<td class='text-center'>" +
+              "<td class='text-center verdes'>" +
                   imagenes +
               "</td>" +
-              "<td class='text-center'>" +
+              "<td class='text-center verdes'>" +
                   documentos +
               "</td>" +
-              "<td class='text-center'>" +
+              "<td class='text-center verdes'>" +
                   videos +
               "</td>" +
               "<td class='text-center'>" +
@@ -234,13 +249,18 @@ View.prototype.table2 = function (array,anos,visor) {
               "<td class='text-center'>" +
                   gestion +
               "</td>" +
-              "<td class='text-center'>" +
+                              "<td class='text-center'>" +
+                  internos +
+              "</td>" +
+              "<td class='text-center diferentes'><b>" +
                   noPedagogicos +
-              "</td>" +
-              "<td class='text-center'>" +
-                  actualizados +
-              "</td>" +
-              "</tr>"
+              "*</b></td>" +
+
+
+              "</tr>" +
+                "<tr>" +
+         "<th colspan='11'>Gran total: "+ (recursos+actualizados) +" (Incluye recursos gestionados, de contratación y de producción interna). <br> *Los recusos no pedagógicos se encuentran contemplados dentro de los de producción interna. </th>" +
+          "</tr>" 
             );
             $(tBody).append(row);
             totales = $(
@@ -485,9 +505,9 @@ View.prototype.tableLogs = function (array, visor) {
      ), tBody = $("<tbody></tbody>");
 
              for (let index = 0; index < limite; index++) {
-            console.log(array[index].evento  );
+          /* console.log(array[index].evento  );*/
              
-             let evento = JSON.parse(array[index].evento );
+           /*  let evento = JSON.parse(array[index].evento );*/
             // console.log(evento);
               
               

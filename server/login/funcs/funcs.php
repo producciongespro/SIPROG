@@ -372,3 +372,46 @@ $mysqli=conectarDB();
 			return false;
 		}
 	}
+
+	function verificaUsuario($user_id, $user){
+
+		global $mysqli;
+
+		$stmt = $mysqli->prepare("SELECT activacion FROM usuarios WHERE id = ? AND correo = ? LIMIT 1");
+		$stmt->bind_param('is', $user_id, $user);
+		$stmt->execute();
+		$stmt->store_result();
+		$num = $stmt->num_rows;
+
+		if ($num > 0)
+		{
+			$stmt->bind_result($activacion);
+			$stmt->fetch();
+			if($activacion == 1)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	function cambiaPassword2($password, $user_id, $user){
+
+		global $mysqli;
+
+		$stmt = $mysqli->prepare("UPDATE usuarios SET password = ?, password_request=0 WHERE id = ? AND correo = ?");
+		$stmt->bind_param('sis', $password, $user_id, $user);
+
+		if($stmt->execute()){
+			return true;
+			} else {
+			return false;
+		}
+	}

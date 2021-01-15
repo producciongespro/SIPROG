@@ -9,6 +9,7 @@
 ?>
 
 <script type="text/javascript">
+    var id = '<?php echo$_SESSION['usuario']['id'];?>'
     var tipo = '<?php echo$_SESSION['usuario']['tipo'];?>'
     var area = '<?php echo$_SESSION['usuario']['nombre_area'];?>'
     var nombre = '<?php echo$_SESSION['usuario']['nombre'];?>'
@@ -16,6 +17,7 @@
     var apellido2 = '<?php echo$_SESSION['usuario']['apellido2'];?>'
     var correo = '<?php echo$_SESSION['usuario']['correo'];?>'
 </script>
+
 
 
 <!DOCTYPE html>
@@ -34,19 +36,15 @@
 <link rel="stylesheet" href="../../vendor/alertify/css/alertify.min.css">
 <link rel="stylesheet" href="../../vendor/alertify/css/themes/default.min.css">
 <link rel="stylesheet" href="../../css/master.css">
-
-
 <script src="../../vendor/jquery-3.3.1/jquery-3.3.1.min.js"></script>
 <script src="../../vendor/bootstrap-4.1/js/bootstrap.min.js"></script>
 <script src="../../vendor/alertify/alertify.min.js"></script>
-
-
 <script src="../../script/main.js"></script>
 <script src="../../script/model.js"></script>
 <script src="../../script/view.js"></script>
-<script src="./js/menu.js"></script>
 
 </head>
+<script src="./js/menu.js"></script>
 <body>
 
 
@@ -60,7 +58,46 @@
     </div>
 <br>
     <div class="container">
-
+<!-- Modal cambio clave -->
+<div class="modal fade" id="cambioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cambio de contraseña</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+              <form id="loginForm"> <!-- form with an ID so we can identify it, now includes both the textbox and the button within it -->
+      <div class="modal-body"> 
+      <label for="modalpass" class="col-form-label">Nueva contraseña:</label>
+           <div class="input-group">
+           
+            <input type="password" name="password" class="form-control" id="password" required>
+            <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+            </div>
+         <br>
+            <label for="modalpass" class="col-form-label">Repita la contraseña:</label> <div class="input-group">
+            <input type="password" name="password2" class="form-control" id="password2" required>
+            <div class="input-group-append">
+             <button id="show_password2" class="btn btn-primary" type="button" onclick="mostrarPassword2()"> <span class="fa fa-eye-slash icon"></span> </button>
+          </div></div>
+      </div>
+      <div id="alerta" class="alert alert-info fade in alert-dismissible show">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true" style="font-size:20px">×</span>
+  </button> <span id="mensajeError"></span> 
+</div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <input type="button" id="btnEnviarClave" class="btn btn-primary" value="Enviar">
+      </div>
+    </div>
+  </div>
+</div>
         <div class="row">
             <div class="col-4">
                 <span class="spn-ico" > <i class="fas fa-user"></i> Usuario:  </span> <span id="spnTipoUsuario"></span>
@@ -71,6 +108,7 @@
 
             <div class="col-4 text-right">
                 <span class="spn-ico"> <i class="fas fa-info-circle"></i> Nombre: </span> <span id="spnNombre"></span>
+                <br><span id="btn_cambiar" class="spn-ico" > <i class="fas fa-key"></i> Cambiar contraseña </span>
             </div>
         </div>
         <hr>

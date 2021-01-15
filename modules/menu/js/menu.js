@@ -73,6 +73,7 @@ function loadLayout(user) {
 
 function saveSession() {
     var objUser = {
+        "id" : id,
         "tipo" : tipo,
         "area": area,
         "nombre": nombre,

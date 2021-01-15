@@ -131,7 +131,7 @@ Model.prototype.setJsonInSession = function ( nameField, dataJson ) {
 
 Model.prototype.stringToJson = function ( stringJson ) {
     var tmpJson = JSON.parse(sessionStorage.getItem(stringJson));
-    //console.log(tmpJson);
+    console.log(tmpJson);
     return tmpJson;
 }
 

@@ -59,7 +59,17 @@ audio {
 text-align: center;
 }
 
+.diferentes{
+    color: blue;
+}
 
+.verdes{
+    color:green;
+}
+
+.titulos-columnas{
+    font-size: 12px; 
+ }
 
 .col-cards-container {
     margin-bottom: 1em;

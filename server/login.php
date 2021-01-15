@@ -16,7 +16,7 @@
 
     $usuario = $mysqli->real_escape_string( $_POST['txtEmail']);
     $pas = $mysqli->real_escape_string( $_POST['txtPassword']);
-    if ($nueva_consulta = $mysqli->prepare("SELECT usuarios.nombre, usuarios.apellido1, usuarios.apellido2, usuarios.correo, usuarios.id_area, usuarios.id_tipo, usuarios.password, tipo_usuario.tipo, areas.nombre_area
+    if ($nueva_consulta = $mysqli->prepare("SELECT usuarios.id, usuarios.nombre, usuarios.apellido1, usuarios.apellido2, usuarios.correo, usuarios.id_area, usuarios.id_tipo, usuarios.password, tipo_usuario.tipo, areas.nombre_area
         FROM usuarios
         INNER JOIN tipo_usuario
         ON usuarios.id_tipo = tipo_usuario.id

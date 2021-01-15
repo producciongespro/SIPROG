@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 function loadMod() {
     $(".div-shadow").removeClass("invisible");
-   m.loadJson("../../server/obtener.php?valor=bitacoranew&id=id_evento", renderTable );
+   m.loadJson("../../server/obtener.php?valor=bitacora&id=id_evento", renderTable );
    
 }
 

@@ -1,0 +1,6 @@
+[01-Jul-2019 12:37:54 UTC] PHP Warning:  stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed in /home/recursosmepgo/public_html/siprog/server/login/PHPMailer/class.smtp.php on line 358
+[01-Jul-2019 12:39:03 UTC] PHP Warning:  stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed in /home/recursosmepgo/public_html/siprog/server/login/PHPMailer/class.smtp.php on line 358
+[03-Sep-2019 18:03:31 UTC] PHP Warning:  stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed in /home/recursosmepgo/public_html/siprog/server/login/PHPMailer/class.smtp.php on line 358
