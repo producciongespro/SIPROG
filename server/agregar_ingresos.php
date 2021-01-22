@@ -75,8 +75,7 @@ sleep(1);
         }
         $evento = array('evento' => 'ingreso');
         $registro = json_encode(array($evento));
-        mysqli_query($mysqli,"INSERT INTO bitacoranew (usuario,evento,id_registro, nombre) VALUES ('$usuarioResp','$registro','$id_ultimo','$nombre')") or die ("Problemas al a���adir elementos a la BD".mysqli_error($mysqli));
-      $errors = array();
+        $errors = array();
 
 mysqli_close($mysqli);
 ?>

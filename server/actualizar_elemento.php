@@ -82,23 +82,7 @@
 							}
 
 
-    $sql2 = "SELECT nombre, apellido1 FROM usuarios WHERE correo='$usuario' LIMIT 1";
-    $result = mysqli_query($mysqli, $sql2);
-    // $result = $mysqli->query($sql);
-    if (mysqli_num_rows($result)>0) {
-        // output data of each row
-        while($row = mysqli_fetch_assoc($result)) {
-        // $nombre =  $row["nombre_proyecto"];
-        $usuarioResp=  $row["nombre"]." ".$row["apellido1"];
-    }
-    }
-
-    // mysqli_query($mysqli,"INSERT INTO bitacora (usuario,evento,id_registro, nombre) VALUES ('$usuarioResp','$evento',$id_ingreso, '$nombre')") or die ("Problemas al añadir elementos a la BD".mysqli_error($mysqli));
-		array_push($totalCambios,($actual),($cambios));
-		print_r ($totalCambios);
-		$totalCambios = json_encode($totalCambios);
-		mysqli_query($mysqli,"INSERT INTO bitacoranew (usuario,evento,id_registro, nombre) VALUES ('$usuarioResp','$totalCambios',$id_ingreso, '$nombre')") or die ("Problemas al añadir elementos a la BD".mysqli_error($mysqli));
-    mysqli_close($mysqli);
+   
 	}
 
 ?>

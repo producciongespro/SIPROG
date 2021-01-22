@@ -37,8 +37,7 @@ $evento = array('evento' => 'eliminación');
 $registro = json_encode(array($evento));
 
   mysqli_query($mysqli,"DELETE FROM ingresos WHERE id_registro = '$idValor' ") or die ("Problemas al actualizar elementos a la BD".mysqli_error($mysqli));
-  mysqli_query($mysqli,"INSERT INTO bitacoranew (usuario,evento,id_registro,nombre) VALUES ('$usuarioResp','$registro','$idValor','$nombre')") or die ("Problemas al añadir elementos a la BD".mysqli_error($mysqli));
-  //cerrar conexion
+   //cerrar conexion
      mysqli_close($mysqli);
 		$errors = array();
 
