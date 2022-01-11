@@ -81,17 +81,17 @@ View.prototype.table2 = function (array,anos,visor) {
         $(visor+(2017+i)).empty();
       }
 
-      var htmlPeriodos = $("<nav><div class='nav nav-tabs' id='informes'></div></nav>");
+    //   var htmlPeriodos = $("<nav><div class='nav nav-tabs' id='informes'></div></nav>");
       var limite = array.length, row;
       var htmlTable = new Array();
-      $("#periodos").append(htmlPeriodos);
-      for (var i = 0; i < anos; i++) {
+    //   $("#periodos").append(htmlPeriodos);
+    //   for (var i = 0; i < anos; i++) {
 
-      $("#informes").append("<a id='menu"+i+"' class='nav-item nav-link' data-toggle='tab' href='#"+(2017+i)+"' role='tab' aria-controls='"+(2017+i)+"'>"+(2017+i)+"</a></li>");
-      if (i==(anos-1)) {
-         $("#menu"+i).addClass('active');
-      }
-        }
+    //     $("#informes").append("<a id='menu"+i+"' class='nav-item nav-link' data-toggle='tab' href='#"+(2017+i)+"' role='tab' aria-controls='"+(2017+i)+"'>"+(2017+i)+"</a></li>");
+    //   if (i==(anos-1)) {
+    //      $("#menu"+i).addClass('active');
+    //   }
+    //     }
       for (var j = 0; j < anos; j++) {
         var estados = [0,0,0,0,0,0,0,0];
          var totalAudios = [0,0,0,0];

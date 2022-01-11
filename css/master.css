@@ -8,6 +8,10 @@ body {
     background-color: #86cddc;
 }
 
+.nav-link.active{
+background-color: #86cddc !important;
+}
+
 .lugar{
 position: absolute;
 margin-left: 12%;

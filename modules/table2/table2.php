@@ -90,10 +90,10 @@
           <div class="col-1">
 
           </div>
-            <div class="col-10" id="periodos">
-            <ul class="nav nav-tabs">
+            <!--<div class="col-10" id="periodos">-->
+            <!--<ul class="nav nav-tabs">-->
 
-              </div>
+            <!--  </div>-->
             <div class="col-1">
 
             </div>
@@ -103,20 +103,54 @@
           <!--                   <div class="tab-pane fade show active" id="2021" role="tabpanel" aria-labelledby="2021-tab">-->
           <!--    <div id="visorEstadisticas2021"  class="col-10 offset-1"></div>-->
           <!--  </div>-->
-             <div class="tab-pane fade show active" id="2021" role="tabpanel" aria-labelledby="2021-tab">
-              <div id="visorEstadisticas2021"  class="col-10 offset-1"></div>
-            </div>
-               <div class="tab-pane fade" id="2020" role="tabpanel" aria-labelledby="2020-tab">
-              <div id="visorEstadisticas2020"  class="col-10 offset-1"></div>
-            </div>
-            <div class="tab-pane fade" id="2019" role="tabpanel" aria-labelledby="2019-tab">
-              <div id="visorEstadisticas2019"  class="col-10 offset-1"></div>
-            </div>
-            <div class="tab-pane fade" id="2018" role="tabpanel" aria-labelledby="2018-tab">
-              <div id="visorEstadisticas2018"  class="col-10 offset-1"></div>
-            </div>
-            <div class="tab-pane fade" id="2017" role="tabpanel" aria-labelledby="2017-tab">
-              <div id="visorEstadisticas2017"  class="col-10 offset-1"></div>
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#visorEstadisticas2017">2017</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#visorEstadisticas2018">2018</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#visorEstadisticas2019">2019</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#visorEstadisticas2020">2020</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#visorEstadisticas2021">2021</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link active" data-toggle="pill" href="#visorEstadisticas2022">2022</a>
+    </li>
+  </ul>
+  <!--<ul class="nav nav-tabs">-->
+    <!--<li class="active"><a data-toggle="tab" href="#home">Home</a></li>-->
+    <!--<li><a data-toggle="tab" href="#visorEstadisticas2017">2017</a></li>-->
+    <!--<li><a data-toggle="tab" href="#visorEstadisticas2018">2018</a></li>-->
+    <!--<li><a data-toggle="tab" href="#visorEstadisticas2019">2019</a></li>-->
+    <!--<li><a data-toggle="tab" href="#visorEstadisticas2020">2020</a></li>-->
+    <!--<li><a data-toggle="tab" href="#visorEstadisticas2021">2021</a></li>-->
+    <!--<li><class="active"><a data-toggle="tab" href="#visorEstadisticas2022">2022</a></li>-->
+  <!--</ul>-->
+
+           <div class="tab-content">
+            <!--<div class="tab-pane fade show active" id="2022" role="tabpanel" aria-labelledby="2022-tab">-->
+              <div id="visorEstadisticas2022"  class="container tab-pane active"> </div>
+            <!--</div>-->
+             <!--<div class="tab-pane fade" id="2021" role="tabpanel" aria-labelledby="2021-tab">-->
+              <div id="visorEstadisticas2021"  class="container tab-pane fade"></div>
+            <!--</div>-->
+               <!--<div class="tab-pane fade" id="2020" role="tabpanel" aria-labelledby="2020-tab">-->
+              <div id="visorEstadisticas2020"  class="container tab-pane fade"></div>
+            <!--</div>-->
+            <!--<div class="tab-pane fade" id="2019" role="tabpanel" aria-labelledby="2019-tab">-->
+              <div id="visorEstadisticas2019"  class="container tab-pane fade"></div>
+            <!--</div>-->
+            <!--<div class="tab-pane fade" id="2018" role="tabpanel" aria-labelledby="2018-tab">-->
+              <div id="visorEstadisticas2018"  class="container tab-pane fade"></div>
+            <!--</div>-->
+            <!--<div class="tab-pane fade" id="2017" role="tabpanel" aria-labelledby="2017-tab">-->
+              <div id="visorEstadisticas2017"  class="container tab-pane fade"></div>
             </div>
           </div>
         </div>
