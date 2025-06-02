@@ -1,0 +1,15 @@
+[07-May-2025 21:22:48 UTC] PHP Warning:  Undefined variable $conexion in /home/recursosmepgo/public_html/siprog/modules/grafico1/datos_recursos.php on line 32
+[07-May-2025 21:22:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/recursosmepgo/public_html/siprog/modules/grafico1/datos_recursos.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/recursosmepgo/public_html/siprog/modules/grafico1/datos_recursos.php on line 32
+[31-May-2025 11:24:21 UTC] PHP Warning:  Undefined array key "usuario" in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 60
+[31-May-2025 11:24:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 60
+[31-May-2025 11:24:21 UTC] PHP Warning:  Undefined array key "usuario" in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 60
+[31-May-2025 11:24:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 60
+[31-May-2025 11:24:21 UTC] PHP Warning:  Undefined array key "usuario" in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 68
+[31-May-2025 11:24:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 68
+[31-May-2025 11:24:21 UTC] PHP Warning:  Undefined array key "usuario" in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 68
+[31-May-2025 11:24:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 68
+[31-May-2025 11:24:21 UTC] PHP Warning:  Undefined array key "usuario" in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 68
+[31-May-2025 11:24:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/recursosmepgo/public_html/siprog/modules/grafico1/grafico.php on line 68

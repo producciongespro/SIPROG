@@ -19,11 +19,11 @@ function renderTable(dataset) {
     //console.log(dataset);
     var fecha = new Date();
     var ano = fecha.getFullYear();
-    var pestanas = ano-2016;
+    var pestanas = ano-2015;
     v.table2(dataset, pestanas, "#visorEstadisticas");
 
     //eventos de de componentes de tabla
-    // bot贸n editar y bot贸n eliminar
+    // bot璐竛 editar y bot璐竛 eliminar
 
     //Evento de eliminar registro
     $(".btn-del").click(function () {
@@ -31,7 +31,7 @@ function renderTable(dataset) {
         let target = $(this).attr("target");
         console.log("target: " + target);
 
-            alertify.confirm( nameSistem, "¿Desea realmente eliminar el registro?",
+            alertify.confirm( nameSistem, "驴Desea realmente eliminar el registro?",
             function(){
                 // si da clic en OK:
               console.log("Aceptar");
@@ -51,7 +51,7 @@ function renderTable(dataset) {
 
     });
 
-    //Evento de edici贸n
+    //Evento de edici璐竛
     $(".btn-edit").click(function (e) {
         e.preventDefault();
         let target = $(this).attr("target");

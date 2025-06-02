@@ -135,8 +135,11 @@
             <img class="cliqueables"  id="btnIrMod02" src="../../assets/ico/registros.png" alt="Base de datos" title="Ver y editar registros" >
             </div>
             <div class="col-2">
-            <img class="cliqueables" id="btnGoups" src="../../assets/ico/sinDefinir.png" alt="" title="Estadísticas trimestrales" >
+              <a href="../table2/informe.php" title="Ir a informe">
+                <img class="cliqueables" id="btnGoups" src="../../assets/ico/sinDefinir.png" alt="Estadísticas trimestrales">
+              </a>
             </div>
+
             <div class="col-3">
                 </div>
         </div>
@@ -146,14 +149,19 @@
       <div class="col-3">
           </div>
         <div class="col-2">
-            <img class="cliqueables" id="btnGrafico1" src="../../assets/ico/graficos.png" alt="gráficos" title="Gráficos"  >
+             <a href="../grafico1/grafico.php" title="Ir a gráfico">
+                <img class="cliqueables" id="btnGoups" src="../../assets/ico/graficos.png" alt="Gráfico anual">
+              </a>
+            <!--<img class="cliqueables" id="btnGrafico1" src="../../assets/ico/graficos.png" alt="gráficos" title="Gráficos"  >-->
         </div>
 
         <div class="col-2">
         <img  class="cliqueables" id="btnLogs" src="../../assets/ico/bitacora.png" alt="calendario"  title="Bitácora">
         </div>
         <div class="col-2">
-        <img class="cliqueables"  id="btnGoHelp" src="../../assets/ico/ayuda.png" alt="ayuda"  title="Ayuda">
+          <a href="../../server/descargar_backup.php" title="Descargar respaldo">
+            <img class="cliqueables" id="btnBackup" src="../../assets/ico/respaldo.png" alt="Respaldar DB">
+          </a>
         </div>
         <div class="col-3">
             </div>
