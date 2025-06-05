@@ -1,4 +1,5 @@
-[05-Dec-2018 14:43:42 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home/recursosmepgo/public_html/siprog/server/conexion.php on line 9
-[05-Dec-2018 14:43:42 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/recursosmepgo/public_html/siprog/server/obtener_informe.php on line 33
-[05-Dec-2018 14:43:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/recursosmepgo/public_html/siprog/server/obtener_informe.php on line 35
-[05-Dec-2018 17:49:19 UTC] PHP Warning:  Error while sending STMT_PREPARE packet. PID=89484 in /home/recursosmepgo/public_html/siprog/server/login.php on line 25
+[26-May-2025 15:20:05 UTC] PHP Warning:  require(../../server/credenciales_backup.php): Failed to open stream: No such file or directory in /home/recursosmepgo/public_html/siprog/server/descargar_backup.php on line 2
+[26-May-2025 15:20:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../server/credenciales_backup.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/recursosmepgo/public_html/siprog/server/descargar_backup.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/recursosmepgo/public_html/siprog/server/descargar_backup.php on line 2
